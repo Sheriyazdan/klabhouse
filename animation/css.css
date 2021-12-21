@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black ;
+    height: 1080px;
+}
+.container .border {
+    animation: animate 4s linear infinite;
+    border-top:5px solid    white ;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.border-block{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.border:nth-child(3){
+    position: absolute;
+}
+.container .border img{
+    position: absolute;
+    top: 32px;
+    left: -40px;
+    width: 102px;
+    height: 102px;
+    border-radius: 50px;
+}
+
+@keyframes animate{
+    0%{
+        transform:rotate(0deg);
+
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+.border:nth-child(3){
+    border-top:5px solid red ;
+    animation: animatetats 4s linear infinite;
+    animation-delay: -1s;
+}
+@keyframes animatetats{
+    0%{
+        transform:rotate(360deg);
+
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+}
+.border:nth-child(2){
+    border-top:5px solid blue ;
+    animation: animatetat 4s linear infinite;
+}
+@keyframes animatetat{
+    0%{
+        transform:rotate(360deg);
+
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+}
+.container button{
+    position: absolute;
+    top: 15px;
+    right: 15px; 
+    color: black;
+    background-color: white;
+    border: 0;
+    border-radius: 12px;
+    padding: 12px;
+}
